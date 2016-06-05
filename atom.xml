@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Hugh 的技術輔助記憶體]]></title>
+  <title><![CDATA[Hugh 的技術輔助記憶體1]]></title>
   <link href="http://fallingstar1204.github.io/atom.xml" rel="self"/>
   <link href="http://fallingstar1204.github.io/"/>
-  <updated>2016-06-06T00:11:06+08:00</updated>
+  <updated>2016-06-06T00:56:17+08:00</updated>
   <id>http://fallingstar1204.github.io/</id>
   <author>
     <name><![CDATA[Hugh Yang]]></name>
