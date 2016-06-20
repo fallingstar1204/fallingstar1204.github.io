@@ -1,0 +1,31 @@
+How to import ?
+
+0. Copy dump file to oracle dump folder
+    Default Path should be C:\oraclexe\app\oracle\admin\XE\dpdump
+
+1. Setup a clean DB. To do so, first login as sysdba to Orcacle
+	<<C:\>sqlplus / as sysdba>>
+
+2. Delete an existing <<kosmos>> user, if it exists:
+	<<SQL> drop user kosmos cascade;>>
+
+3. Create the user and grant all privileges to the user:
+	<<SQL> create user kosmos identified by kosmos;>>
+	<<SQL> grant all privileges to kosmos;>>
+
+4. Change directory to oracle default dpdump file.
+	C:\oraclexe\app\oracle\admin\XE\dpdump
+
+5. Import data from dump file.
+	impdp system/oracle dumpfile=WPHG.DMP fromuser=kosmos touser=kosmos
+
+How to export
+1. login as sysdba to Orcacle.
+	<<C:\>sqlplus / as sysdba>>
+2. Create your export directory
+	<<SQL>CREATE OR REPLACE DIRECTORY DATA_DUMP_DIR AS 'C:\EXPDB';>>
+3. Export data from local database.
+	expdp kosmos/kosmos@localhost:1521/xe schemas=kosmos directory=DATA_DUMP_DIR dumpfile=20160427_ANT_INIT.dmp logfile=20160427_ANT_INI_export.log
+
+Reference
+https://zh.wikibooks.org/zh-tw/Expdp@impdp%E7%94%A8%E6%B3%95

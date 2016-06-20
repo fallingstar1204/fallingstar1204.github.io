@@ -1,0 +1,59 @@
+- HOW TO USE COPY FORM METHOD (SQLPLUS ONLY)
+   
+COPY FROM kosmos/kosmos@localhost INSERT BAK_USER_STATE USING SELECT * FROM USER_STATE;
+COPY FROM kosmos/kosmos@localhost INSERT BAK_AGILE_PROCESS_DEF USING SELECT * FROM AGILE_PROCESS_DEF;
+
+- HOW TO GET 'CLEAN' DDL
+begin
+     dbms_metadata.set_transform_param (dbms_metadata.session_transform,'STORAGE',false);
+     dbms_metadata.set_transform_param (dbms_metadata.session_transform,'TABLESPACE',false);
+     dbms_metadata.set_transform_param (dbms_metadata.session_transform,'SEGMENT_ATTRIBUTES', false);
+     dbms_metadata.set_transform_param (dbms_metadata.session_transform,'REF_CONSTRAINTS', false);
+     dbms_metadata.set_transform_param (dbms_metadata.session_transform,'CONSTRAINTS', false);
+end;
+
+select dbms_metadata.get_ddl('TABLE', 'AGILE_PROCESS_DEF') from dual;
+
+
+- HOW TO GENERATE select syntax dynamically.
+DECLARE
+  myTable varchar(32) := 'USER_STATE';
+  myColumn varchar2(32);    
+  myType varchar2(32); 
+  selectSyntax varchar2(255);
+  
+  CURSOR column_cursor IS 
+    SELECT column_name, data_type FROM user_tab_columns WHERE table_name = myTable;  
+BEGIN
+  selectSyntax := 'SELECT ';
+  OPEN column_cursor;
+  LOOP
+     FETCH column_cursor INTO myColumn, myType; 
+     EXIT WHEN column_cursor%NOTFOUND;
+     
+     IF myType = 'LONG' THEN
+        selectSyntax := selectSyntax || 'TO_LOB(' || myColumn || ') AS ' || myColumn || ',';
+     ELSE
+        selectSyntax := selectSyntax || myColumn || ',';
+     END IF;    
+  END LOOP;
+  selectSyntax := SUBSTR(selectSyntax, 0, LENGTH(selectSyntax) - 1);
+  selectSyntax := selectSyntax || ' FROM ' || myTable;
+  DBMS_OUTPUT.PUT_LINE('selectSyntax -> [' || selectSyntax || ']');
+END; 
+
+
+-HOW TO CHECK WHETHER OR NOT ONE TABLE CONTAINS LONG DATATYPE column.
+
+SELECT
+  CASE 
+    WHEN EXISTS(SELECT * FROM user_tab_columns WHERE data_type = 'LONG' AND table_name = 'PORTFOLIO') THEN 1
+    ELSE 0
+  END INTO has_long_datatype
+FROM dual
+
+-HOW TO CREATE MULTIPLE PROCEDURES IN ONE SQL SCRIPT
+Place a forward slash
+/
+between the two procedures on its own line.
+SQL*Plus requires it as well.
