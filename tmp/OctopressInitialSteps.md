@@ -2,48 +2,89 @@
 
 Octopress 安裝不管是安裝在哪種環境, 基本是不外乎以下幾個步驟
 
-1. 設定 Ruby 環境 
-- 下載與安裝 Ruby
+### 設定 Ruby 環境 
+1. 下載與安裝 Ruby
 	[下載][rubyinstaller]
-- 設定 Ruby 路徑
+2. 設定 Ruby 路徑
 
-- 下載與安裝 Ruby Devkit
+3. 下載與安裝 Ruby Devkit
 	[下載][rubyinstaller]
-
+	
+	````
 	$ ruby dk.rb init
+	$ ruby dk.rb install
+	````
+4. 更新 RubyGems
 
-	$ruby dk.rb install
-
-- 更新gem
-
+	````
 	$ gem update --system
+	````
 
-2. 設定 Git 環境
+### 設定 Git 環境
+1. 安裝 Git
 
+	````	
 	$ homebrew install git
+	$ git --version
+	````
 
-3. 設定 Github 
+### 設定 Octopress
+
+1. 下載 octopress
+
+	````
+	$ git clone git://github.com/imathis/octopress.git 	octopress
+	````
+2. 安裝 octopress 需要用到的 bundler 
+
+	````
+	$ cd octopress
+	$ gem install bundler
+	$ bundle install		
+	````
+
+3. 安裝預設主題
+
+	````
+	$ rake install
+	````
+4. 預覽 blog
+
+	````
+	$ rake preview
+	````
+	打開瀏覽器輸入 http://localhost:4000 即可瀏覽我們搭建的 blog.
+	
+
+### 設定 Github and Github pages
+1. 設定 Github 
+	
 	申請 GitHub 的帳號，並且為您的 blog 建立一個 repo, 其命名規則是 [yourname].github.io
+	建立成功後會得到一個 SSH 地址 ``git@github.com:[your_username]/[your_username].github.io.git``
+	
+2. 發佈到 Github pages
 
-4. 設定 Octopress
+	````
+	$ cd octopress
+	$ rake setup_github_pages
+	````	
 
-	git clone git://github.com/imathis/octopress.git octopress
-	cd octopress
-	gem install bundler
-	bundle install
-	rake install
-	rake setup_github_pages
 
-5. 編輯 _config.yml (Optional)
+### 開始使用
+1. 建立撰寫文章
 
-6. 建立撰寫文章
+	````
 	$ rake new_post["Post Title"]
+	````
+2. 預覽文章
 
-7. 預覽文章
+	````
 	$ rake generate
 	$ rake preview
-	
-8. 發佈	
-	$ rake deploy
+	````
+3. 發佈
 
+	````
+	$ rake deploy
+	````
 [rubyinstaller]:http://rubyinstaller.org/downloads/

@@ -6,14 +6,18 @@
 
 #### 安裝要求
 - 安裝好 Xcode
-		
-		$ xcode-select --install
-		$ xcode-select -p
+
+````		
+$ xcode-select --install	
+$ xcode-select -p
+````
 		
 - 安裝好 Ruby 開發工具
 
 #### 安裝指令
-	$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+````
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+````
 
 #### 常用指令
 
@@ -27,6 +31,7 @@
 | 已安裝套件清單		| brew list 				|
 | 查看需要更新的套件 	| brew outdated 			|
 | 更新套件			| brew upgrade (套件名稱) 	|
+| 檢查設定			| brew doctor 				|
 
 
 ## Homebrew Cask 簡介 
@@ -43,55 +48,65 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"	
 
 #### 安裝指令
-	$ brew install caskroom/cask/brew-cask
+````
+$ brew install caskroom/cask/brew-cask
+````
 
 ## 安裝步驟
-	# install xcode
-	$ xcode-select install
+````
+# install xcode
+$ xcode-select install
 	
-	# check whether or nor xcode has already installed.
-	$ xcode-select -p
+# check whether or nor xcode has already installed.
+$ xcode-select -p
 	
-	# install homebrew
-	$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install homebrew
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	
-	# check homebrew
-	$ brew docter
+# check homebrew
+$ brew docter
 
-	# update homebrew library
-	$ homebrew update
+# update homebrew library
+$ homebrew update
 	
-	# install cask
-	$ brew install caskroom/cask/brew-cask
+# install cask
+$ brew install caskroom/cask/brew-cask
 
-	# check homebrew cask
-	$ brew cask docter
+# check homebrew cask
+$ brew cask docter
 	
-	# update cask library
-	$ homebrew cask update
+# update cask library
+$ homebrew cask update
 
-	# setup install path for cask
-	$ echo export HOMEBREW_CASK_OPTS="--appdir=/Applications" >> ~/.bash_profile
-	$ source ~/.bash_profile
+# setup install path for cask
+$ echo export HOMEBREW_CASK_OPTS="--appdir=/Applications" >> ~/.bash_profile
+$ source ~/.bash_profile
 
-	# install software
-	$ brew install git
-	$ brwe install wget
-	$ brew cask install alfred
-	$ brew cask install google-chrome
-	$ brew cask install skype
-	$ brew cask install vlc
-	$ brew cask install mou
-	$ brew cask install dropbox
-	$ brew cask install sourcetree
-	$ brew cask install caskroom-versions/sublime-text3
-	$ brew cask install evernote
-	$ brew cask install virtualbox
-	$ brew cask install r-name
-	$ brew cask install teamviewer
-	$ brew cask install xmind
-	$ brew cask install staruml
-	$ brew cask install balsamiq-mockups
+# install software
+$ brew install git
+$ brwe install wget
+$ brew cask install alfred
+$ brew cask install google-chrome
+$ brew cask install skype
+$ brew cask install vlc
+$ brew cask install mou
+$ brew cask install dropbox
+$ brew cask install sourcetree
+$ brew cask install caskroom-versions/sublime-text3
+$ brew cask install evernote
+$ brew cask install virtualbox
+$ brew cask install r-name
+$ brew cask install jing
+$ brew cask install appcleaner
+$ brew cask install teamviewer
+$ brew cask install xmind
+$ brew cask install staruml
+$ brew cask install balsamiq-mockups
+$ brew cask install mounty
+$ brew cask install intellij-idea-ce
+$ brew cask install java6
+$ brew cask install java7 
+````
 
 [homebrewWebsite]: http://brew.sh/index_zh-tw.html
 [caskWebsite]: https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
