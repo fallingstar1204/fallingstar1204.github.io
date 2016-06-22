@@ -72,8 +72,10 @@
 	
 ## 設定 Octopress
 ---
-- 下載 octopress
+### For new github pages
 
+- 下載 octopress
+I
 	````
 	$ git clone git://github.com/imathis/octopress.git 	octopress
 	````
@@ -97,7 +99,29 @@
 	````
 	打開瀏覽器輸入 http://localhost:4000 即可瀏覽我們搭建的 blog.
 	
+### For existing github pages
+- 下載現有的 blog 
 
+	````
+	$ git clone -b source git@github.com:[your_username]/[your_username].github.io.git octopress	
+	$ cd octopress	
+	$ git clone git@github.com:[your_username]/[your_username].github.io.git _deploy
+	````
+
+- 安裝 octopress 需要用到的 bundler 
+
+	````
+	$ cd octopress
+	$ gem install bundler
+	$ bundle install		
+	````
+- 預覽 blog
+
+	````
+	$ rake preview
+	````
+	打開瀏覽器輸入 http://localhost:4000 即可瀏覽我們搭建的 blog.	
+	
 ## 設定 Github and Github pages
 ---
 - 設定 Github 
