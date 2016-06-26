@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Homebrew-install"
+date: 2016-06-26 11:22:06 +0800
+comments: true
+categories: HowTo Homebrew
+---
+
 ## Homebrew 簡介 
 - Mac上的套件管理工具
 - 使用 Ruby 語言開發
