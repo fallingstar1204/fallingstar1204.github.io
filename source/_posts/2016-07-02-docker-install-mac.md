@@ -1,13 +1,15 @@
-
-Docker Toolbox 是安裝 Docker 在 Windows 以及 Mac 上的建議方式. 透過一連串的 GUI 操作就可以安裝並設定完成 Docker Client, Docker Machine, Docker Compose, Docker Kitematic 以及 VirtualBox. 
-
-Docker Toolbox 一整個就是懶人包的概念. 但是方便歸方便, 在 Mac 上面多少還是會希望能透過 Homebrew 方式來安裝, 同時也方便我們整理軟體安裝 Script 供未來重新安裝使用.
-
-安裝方式有兩種
+---
+layout: post
+title: "Install docker on Mac"
+date: 2016-07-02 16:27:53 +0800
+comments: true
+categories: HowTo Docker Homebrew
+---
+在 Mac 上安裝 Docker 的方式有兩種, 雖然 Toolbox 可以使用 GUI 的安裝方式, 但是既然都已經有 Homebrew 了, 那何不透過它來安裝呢 ? 同時也能順便更新下安裝的 Script 檔案
 
 ## 透過 Toolbox 安裝設定 Docker
 ---
-這是最簡單的方式 XD
+這是最簡單的方式! Docker Toolbox 是安裝 Docker 在 Windows 以及 Mac 上的建議方式. 透過一連串的 GUI 操作就可以安裝並設定完成 Docker Client, Docker Machine, Docker Compose, Docker Kitematic 以及 VirtualBox. 說明白一點就是懶人包 XD
 
 ### 安裝 Toolbox 設定 Docker
 ```
