@@ -40,6 +40,15 @@ $ curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
 $ rvm rubygems latest
 ```
 
+### For Ubuntu
+
+- 安裝 [RVM][rvm_website], [Ruby][ruby_website]
+ 	
+```
+$ curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
+$ rvm rubygems latest
+```
+
 ## 設定 Git 環境
 ---
 
@@ -60,6 +69,21 @@ $ git config --global user.email "<電子信箱>"
 
 ```	
 $ homebrew install git
+$ git --version
+```
+
+- 設定 Git 參數
+
+```
+$ git config --global user.name "<使用者名字>"
+$ git config --global user.email "<電子信箱>"
+```
+
+### For Ubuntu
+- 安裝 Git  
+
+```	
+$ apt-get install git
 $ git --version
 ```
 
