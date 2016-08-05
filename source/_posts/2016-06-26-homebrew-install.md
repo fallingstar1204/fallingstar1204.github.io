@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Homebrew-install"
+title: "Homebrew installation"
 date: 2016-06-26 11:22:06 +0800
 comments: true
-categories: HowTo Homebrew
+categories: Homebrew Mac
 ---
 
 ## Homebrew 簡介 
@@ -108,7 +108,7 @@ $ brew cask install alfred
 $ brew cask install google-chrome
 $ brew cask install skype
 $ brew cask install vlc
-$ brew cask install mou
+$ brew cask install haroopad
 $ brew cask install dropbox
 $ brew cask install sourcetree
 $ brew cask install caskroom-versions/sublime-text3
@@ -124,7 +124,11 @@ $ brew cask install balsamiq-mockups
 $ brew cask install mounty
 $ brew cask install intellij-idea-ce
 $ brew cask install java6
-$ brew cask install java7 
+$ brew cask install java7
+$ brew install zsh zsh-completions
+
+# install oh my zsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 [homebrewWebsite]: http://brew.sh/index_zh-tw.html
