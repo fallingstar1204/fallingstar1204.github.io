@@ -7,8 +7,9 @@ categories: Docker Homebrew
 ---
 
 在 Mac 上安裝 Docker 的方式有兩種
-[透過 Toolbox 安裝設定 Docker](#toolbox)
-[自行安裝設定 Docker](#manaul)
+
+- [透過 Toolbox 安裝設定 Docker](#toolbox)
+- [自行安裝設定 Docker](#manaul)
 
 
 ### <span id="toolbox">透過 Toolbox 安裝設定 Docker</span>
