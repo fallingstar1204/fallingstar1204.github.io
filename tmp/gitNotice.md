@@ -35,3 +35,14 @@ $ git branch --track branch名稱 遠端branch
 建立一個 tracking 遠端 branch 的 branch，這樣以後 push/pull都會直接對應到該遠端的branch。
 $ git branch --set-upstream branch名稱 遠端branch 
 將一個已存在的 branch 設定成 tracking 遠端的branch。
+
+
+
+Compute object ID and optionally creates a blob from a file
+```
+$ git hash-object 
+```
+Provide content or type and size information for repository objects
+```
+$ git cat-file 
+```
