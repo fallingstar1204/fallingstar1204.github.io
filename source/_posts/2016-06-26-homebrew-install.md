@@ -37,7 +37,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 ### 常用指令
 
 | 說明 				| 指令 						|
-| :-------   		| :----						|
+| :--		| :--						|
 | 更新套件清單		| brew update 				|
 | 搜尋套件    		| brew search (套件名稱)   	|
 | 安裝套件     		| brew install (套件名稱)   	|
@@ -86,7 +86,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 $ brew docter
 
 # update homebrew library
-$ homebrew update
+$ brew update
 	
 # install cask
 $ brew install caskroom/cask/brew-cask
@@ -95,7 +95,7 @@ $ brew install caskroom/cask/brew-cask
 $ brew cask docter
 	
 # update cask library
-$ homebrew cask update
+$ brew cask update
 
 # setup install path for cask
 $ echo export HOMEBREW_CASK_OPTS="--appdir=/Applications" >> ~/.bash_profile
@@ -125,6 +125,7 @@ $ brew cask install mounty
 $ brew cask install intellij-idea-ce
 $ brew cask install java6
 $ brew cask install java7
+$ brew cask install java
 $ brew install zsh zsh-completions
 
 # install oh my zsh
