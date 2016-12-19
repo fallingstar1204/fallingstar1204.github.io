@@ -1,14 +1,18 @@
-## 建立本機儲存庫
-開始使用 Git 的初始指令不外乎就是透過 `git init` 或者 `git clone` 本機端的儲存庫. 至於要使用哪個指令則是取決於你的版本控管資料來自於哪邊！
+使用 Git 的步驟主要如下:
 
-無任何現有儲存庫的情況
+#### 建立 Git 工作區
+建立 Git 工作區的指令不外乎就是透過 `git init` 或者 `git clone`. 但是具體上要使用哪個指令則是取決於你的版本控管資料來自於哪邊！
+
+- 無任何現有儲存庫的情況
 ```
+$ mkdir [working folder]
+$ cd [working folder]
 $ git init
 ```
 
-已有儲存庫的情況
+- 已有儲存庫的情況
 ```
-$ git clone [REPO_URI]
+$ git clone [REPO_URI] [working folder]
 ```
 
 ## 建立分享儲存庫
