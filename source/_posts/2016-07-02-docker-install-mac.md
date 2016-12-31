@@ -22,11 +22,12 @@ $ brew cask install dockertoolbox
 
 ### <span id="manaul">自行安裝設定 Docker</span>
 
-##### 安裝 Docker 和 Docker-machine
+##### 安裝 Docker, Docker-machine, Docker-compose
 
 ```
 $ brew install docker 
 $ brew install docker-machine
+$ brew install docker-compose
 ```
 
 ##### 建立及啟動 VM 
